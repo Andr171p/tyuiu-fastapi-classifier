@@ -3,7 +3,6 @@ from sklearn.pipeline import Pipeline
 
 from src.ml.pipes.imputer import Imputer
 from src.ml.pipes.labels import LabelsImputer
-from src.ml.pipes.binary import BinaryImputer
 from src.ml.pipes.ohe import OHE
 from src.ml.pipes.scaler import Scaler
 from src.ml.pipes.model import BinaryClassifierModel
@@ -38,4 +37,7 @@ print(user.model_dump())
 df = imp.transform(user.model_dump())
 print(df)
 res = pipeline.transform(df)
-print(res)
+
+model = BinaryClassifierModel()
+predict = model.predict_proba(res)
+print(predict)
