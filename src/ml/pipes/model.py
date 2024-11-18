@@ -33,6 +33,3 @@ class BinaryClassifierModel(BaseEstimator, ClassifierMixin):
     def predict_proba(self, X: Union[pd.DataFrame, np.ndarray]) -> ...:
         check_is_fitted(self, "_model")
         return self._model.predict_proba(X)
-
-    def score(self, X, y):
-        ...

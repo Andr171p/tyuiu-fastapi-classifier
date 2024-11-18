@@ -1,1 +1,4 @@
-from src.config import BASE_DIR
+
+
+class Pipeline:
+    ...
