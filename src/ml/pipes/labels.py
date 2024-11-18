@@ -1,22 +1,23 @@
-import pickle
 import pandas as pd
 from typing import Self
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.preprocessing import LabelBinarizer
 
 from src.config import settings
+from src.utils import load_dill
+from src.ml.pipes.binary import BinaryImputer
 
 
 class LabelsImputer(BaseEstimator, TransformerMixin):
     def __init__(self) -> None:
-        self._imputer = pickle.load(
-            file=settings.pipe.imputer_path
+        self._imputer = load_dill(
+            filename=settings.pipe.imputer_path
         )
 
-    def fit(self, X: pd.DataFrame) -> Self:
+    def fit(self, X: pd.DataFrame, y=None) -> Self:
         self._imputer.fit(X)
         return self
 
-    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+    def transform(self, X: pd.DataFrame, y=None) -> pd.DataFrame:
         labeled = self._imputer.transform(X)
+        print(labeled)
         return labeled

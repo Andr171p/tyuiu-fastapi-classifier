@@ -8,7 +8,7 @@ BASE_DIR: Path = Path(__file__).resolve().parent.parent
 class PipesSettings(BaseSettings):
     ohe_path: Path = BASE_DIR / "pipes" / "one-hot-encoder.pkl"
     scaler_path: Path = BASE_DIR / "pipes" / "standard-scaler.pkl"
-    imputer_path: Path = BASE_DIR / "pipes" / "binary-imputer.pkl"
+    imputer_path: Path = BASE_DIR / "pipes" / "binary-imputer.dill"
 
 
 class ModelsSettings(BaseSettings):

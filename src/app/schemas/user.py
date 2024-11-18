@@ -10,8 +10,8 @@ class UserSchema(BaseModel):
     exams_points: int
     bonus_points: int
     education: str
-    study_form: str
-    reception_form: Literal['Очная', 'Заочная', 'Очно-Заочная']
+    study_form: Literal['Очная', 'Заочная', 'Очно-Заочная']
+    reception_form: str
     speciality: str
 
     @field_validator('gpa')

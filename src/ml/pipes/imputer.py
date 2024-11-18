@@ -1,26 +1,21 @@
 import pandas as pd
-from typing import Any, Dict, List, Optional
+from typing import Any
 from functools import singledispatchmethod
 
 
 class Imputer:
-    def __init__(self, features: List[str]) -> None:
-        self._features = features
 
     @singledispatchmethod
-    def transform(self, arg: Any) -> Optional[pd.DataFrame, None]:
-        raise ValueError(f"Cannot transform value of type {type(arg)}")
+    def transform(self, X) -> pd.DataFrame:
+        raise NotImplementedError(f"Method 'transform' not implemented for type {type(X)}")
 
     @transform.register
-    def _(self, X: Dict[str, Any]) -> pd.DataFrame:
+    def _(self, X: dict) -> pd.DataFrame:
         return pd.DataFrame(
             data=X,
             index=[0]
         )
 
     @transform.register
-    def _(self, X: List[Dict[str, Any]]) -> pd.DataFrame | None:
+    def _(self, X: list) -> pd.DataFrame:
         return pd.DataFrame(X)
-
-
-imp = Imputer(features=...)
