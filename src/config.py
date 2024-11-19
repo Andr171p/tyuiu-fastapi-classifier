@@ -17,9 +17,20 @@ class ClassifierSettings(BaseSettings):
     classifier_path: Path = BASE_DIR / "models" / "classifiers" / "random-forrest-classifier-new.joblib"
 
 
+class AppSettings(BaseSettings):
+    name: str = "Tyuiu enrollment prediction API"
+
+
+class UvicornSettings(BaseSettings):
+    host: str = "0.0.0.0"
+    port: int = 8000
+
+
 class Settings(BaseSettings):
     transformers: TransformersSettings = TransformersSettings()
     classifier: ClassifierSettings = ClassifierSettings()
+    app: AppSettings = AppSettings()
+    uvicorn: UvicornSettings = UvicornSettings()
 
 
 settings = Settings()

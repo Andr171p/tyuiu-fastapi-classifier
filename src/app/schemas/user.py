@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import List, Literal
 from pydantic import BaseModel, field_validator
 
 
@@ -41,3 +41,7 @@ class UserSchema(BaseModel):
         if v < 0 or v > 10:
             raise ValueError("Field `bonus_points` must be in range [0;10]")
         return v
+
+
+class UsersSchema(BaseModel):
+    data: List[UserSchema]
