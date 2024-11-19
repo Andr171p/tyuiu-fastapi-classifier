@@ -15,11 +15,3 @@ app = FastAPI(
 app.include_router(classifier_router)
 
 app.add_middleware(GlobalMiddleware)
-
-
-if __name__ == "__main__":
-    uvicorn.run(
-        app=app,
-        host=settings.uvicorn.host,
-        port=settings.uvicorn.port
-    )
