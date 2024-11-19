@@ -12,7 +12,7 @@ class PipesSettings(BaseSettings):
 
 
 class ModelsSettings(BaseSettings):
-    classifier_path: Path = BASE_DIR / "models" / "random-forrest-model.joblib"
+    classifier_path: Path = BASE_DIR / "models" / "classifiers" / "random-forrest-classifier.joblib"
 
 
 class Settings(BaseSettings):

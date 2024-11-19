@@ -4,7 +4,6 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 from src.config import settings
 from src.utils import load_dill
-from src.ml.pipes.binary import BinaryImputer
 
 
 class LabelsImputer(BaseEstimator, TransformerMixin):
@@ -19,5 +18,4 @@ class LabelsImputer(BaseEstimator, TransformerMixin):
 
     def transform(self, X: pd.DataFrame, y=None) -> pd.DataFrame:
         labeled = self._imputer.transform(X)
-        print(labeled)
         return labeled

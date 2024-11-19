@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 import pandas as pd
-from typing import Any, Union, Self
+from typing import Union, Self
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_is_fitted

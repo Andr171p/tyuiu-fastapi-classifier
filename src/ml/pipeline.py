@@ -5,7 +5,7 @@ from src.ml.pipes.imputer import Imputer
 from src.ml.pipes.labels import LabelsImputer
 from src.ml.pipes.ohe import OHE
 from src.ml.pipes.scaler import Scaler
-from src.ml.pipes.model import BinaryClassifierModel
+from src.ml.pipes.classifier import BinaryClassifierModel
 
 features = ['education', 'study_form', 'reception_form', 'speciality']
 
