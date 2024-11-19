@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf461831-f467-4d40-b8c1-24bc4ec84675" name="Changes" comment="20.11.2024 0.0.1">
-      <change afterPath="$PROJECT_DIR$/src/app/application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/middlewares/globals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routers/classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/schemas/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/transformers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bf461831-f467-4d40-b8c1-24bc4ec84675" name="Changes" comment="20.11.2024 0.0.2">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cache/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transformers/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/imputer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transformers/imputer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transformers/labels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/ohe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transformers/ohe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ml/transformers/scaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/transformers/scaler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/classifier.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +40,10 @@
     "Python.labels.executor": "Run",
     "Python.main.executor": "Run",
     "Python.pipeline (1).executor": "Run",
+    "Python.pipeline (2).executor": "Run",
     "Python.pipeline.executor": "Run",
     "Python.scaler.executor": "Run",
+    "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/andre/TyuiuMlApi/models/classifiers",
@@ -73,7 +59,7 @@
       <recent name="C:\Users\andre\TyuiuMlApi\processors" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pipeline (1)">
+  <component name="RunManager" selected="Python.main">
     <configuration name="labels" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuMlApi" />
       <option name="ENV_FILES" value="" />
@@ -140,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pipeline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pipeline (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuMlApi" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,11 +135,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/pipeline" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pipeline/pipeline.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/model/pipeline.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,7 +148,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scaler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuMlApi" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,11 +157,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/pipeline/pipes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/schemas" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pipeline/pipes/scaler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/schemas/user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.pipeline (2)" />
+        <item itemvalue="Python.user" />
         <item itemvalue="Python.pipeline (1)" />
         <item itemvalue="Python.labels" />
-        <item itemvalue="Python.scaler" />
-        <item itemvalue="Python.pipeline" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -226,12 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1732049902795</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20.11.2024 0.0.2">
+      <option name="closed" value="true" />
+      <created>1732051449144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732051449144</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20.11.2024 0.0.0" />
     <MESSAGE value="20.11.2024 0.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.11.2024 0.0.1" />
+    <MESSAGE value="20.11.2024 0.0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="20.11.2024 0.0.2" />
   </component>
 </project>
