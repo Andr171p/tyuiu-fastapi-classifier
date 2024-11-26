@@ -23,7 +23,7 @@ class AppSettings(BaseSettings):
 
 class UvicornSettings(BaseSettings):
     host: str = "0.0.0.0"
-    port: int = 5000
+    port: int = 8000
 
 
 class Settings(BaseSettings):
