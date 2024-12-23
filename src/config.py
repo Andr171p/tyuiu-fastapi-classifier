@@ -6,31 +6,23 @@ from pydantic_settings import BaseSettings
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
 
-class TransformersSettings(BaseSettings):
-    ohe_path: Path = BASE_DIR / "models" / "transformers" / "one-hot-encoder-new.pkl"
-    scaler_path: Path = BASE_DIR / "models" / "transformers" / "standard-scaler-new.pkl"
-    imputer_path: Path = BASE_DIR / "models" / "transformers" / "binary-imputer-new.dill"
-    features: List[str] = ['education', 'study_form', 'reception_form', 'speciality']
+class MLSettings(BaseSettings):
+    ohe: Path = BASE_DIR / "trained_models" / "one-hot-encoder.joblib"
+    scaler: Path = BASE_DIR / "trained_models" / "standard-scaler.joblib"
+    label: Path = BASE_DIR / "trained_models" / "label-encoder.joblib"
+    clf: Path = BASE_DIR / "trained_models" / "classifier.joblib"
+
+    features: List[str] = ['direction']
 
 
-class ClassifierSettings(BaseSettings):
-    classifier_path: Path = BASE_DIR / "models" / "classifiers" / "random-forrest-classifier-new.joblib"
-
-
-class AppSettings(BaseSettings):
-    name: str = "Tyuiu enrollment prediction API"
-
-
-class UvicornSettings(BaseSettings):
-    host: str = "0.0.0.0"
-    port: int = 8000
+class APISettings(BaseSettings):
+    name: str = "Classifier API"
+    prefix: str = "/api/v1"
 
 
 class Settings(BaseSettings):
-    transformers: TransformersSettings = TransformersSettings()
-    classifier: ClassifierSettings = ClassifierSettings()
-    app: AppSettings = AppSettings()
-    uvicorn: UvicornSettings = UvicornSettings()
+    ml: MLSettings = MLSettings()
+    api_v1: APISettings = APISettings()
 
 
 settings = Settings()
