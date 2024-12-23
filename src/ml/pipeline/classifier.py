@@ -25,3 +25,27 @@ class ModelPipeline(Transformer, BaseClassifier):
         print(data)
         y = self._classifier.predict_proba(X=data)
         return y
+
+
+model_pipeline = ModelPipeline()
+
+
+from src.api_v1.schemas.applicant import ApplicantSchema
+
+a = ApplicantSchema(
+    gender="М",
+    gpa=3.2,
+    priority=2,
+    points=200,
+    direction="08.05.00 Техника и технологии строительства"
+)
+b = ApplicantSchema(
+    gender="Ж",
+    gpa=4.2,
+    priority=1,
+    points=300,
+    direction="08.05.00 Техника и технологии строительства"
+)
+ml = ModelPipeline()
+x = [a.model_dump(), b.model_dump()]
+print(ml.predict_proba(x))

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 
-from src.ml import ml_pipeline
+from src.ml.pipeline.classifier import model_pipeline
 
 from src.api_v1.schemas.applicant import (
     ApplicantSchema,
@@ -21,7 +21,7 @@ classifier_router = APIRouter(
 @classifier_router.post(path="/predict/applicant/", response_model=ApplicantResponse)
 async def predict_applicant(applicants: ApplicantSchema) -> JSONResponse:
     data = applicants.model_dump()
-    prediction = ml_pipeline.predict(data)
+    prediction = model_pipeline.predict_proba(data)
     return JSONResponse(
         content={
             'status': 'ok',
@@ -30,10 +30,10 @@ async def predict_applicant(applicants: ApplicantSchema) -> JSONResponse:
     )
 
 
-@classifier_router.post(path="/predict/applicants/", response_model=UsersResponseSchema)
-async def predict_users(users: UsersSchema) -> JSONResponse:
-    data = users.model_dump()['data']
-    predictions = ml_pipeline.predict(data)
+@classifier_router.post(path="/predict/applicants/", response_model=...)
+async def predict_applicants(applicants: ApplicantsSchema) -> JSONResponse:
+    data = applicants.model_dump()['applicants']
+    predictions = model_pipeline.predict_proba(data)
     return JSONResponse(
         content={
             'status': 'ok',
