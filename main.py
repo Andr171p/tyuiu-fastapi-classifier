@@ -7,7 +7,7 @@ from src.config import settings
 
 
 app = FastAPI(
-    title=settings.app.name,
+    title=settings.api_v1.name,
 )
 
 app.include_router(classifier_router)
