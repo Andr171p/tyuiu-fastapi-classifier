@@ -30,7 +30,7 @@ class ModelPipeline(Transformer, BaseClassifier):
 model_pipeline = ModelPipeline()
 
 
-from src.api_v1.schemas.applicant import ApplicantSchema
+'''from src.api_v1.schemas.applicant import ApplicantSchema
 
 a = ApplicantSchema(
     gender="М",
@@ -48,4 +48,5 @@ b = ApplicantSchema(
 )
 ml = ModelPipeline()
 x = [a.model_dump(), b.model_dump()]
-print(ml.predict_proba(x))
+d = ml.predict_proba(x)
+print([float(i[1]) for i in d])'''

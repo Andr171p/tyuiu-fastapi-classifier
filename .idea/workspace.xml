@@ -4,41 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf461831-f467-4d40-b8c1-24bc4ec84675" name="Changes" comment="[tyuiu-classifier-api] 26.11.2024 1.0">
-      <change afterPath="$PROJECT_DIR$/src/api_v1/lifespan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/base/transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/pipeline/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/pipeline/classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/pipeline/transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ml/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trained_models/label-encoder.joblib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trained_models/one-hot-encoder.joblib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trained_models/standard-scaler.joblib" afterDir="false" />
+    <list default="true" id="bf461831-f467-4d40-b8c1-24bc4ec84675" name="Changes" comment="[tyuiu-classifier-api] 24.12.2024 update route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/classifiers/random-forrest-classifier-new.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/trained_models/classifier.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transformers/binary-imputer-new.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transformers/one-hot-encoder-new.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transformers/standard-scaler-new.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/application.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/middlewares/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/middlewares/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/base/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/base/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/models/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/imputer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/models/label_encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/ohe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/models/one_hot_encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/transformers/scaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/models/standard_scaler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ml/pipeline/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ml/pipeline/classifier.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +37,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.__init__.executor": "Run",
+    "Python.applicant.executor": "Run",
+    "Python.classifier (1).executor": "Run",
     "Python.classifier.executor": "Run",
     "Python.config.executor": "Run",
     "Python.data_transformer.executor": "Run",
@@ -100,8 +72,8 @@
       <recent name="C:\Users\andre\TyuiuMlApi\src\ml_pipeline" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.classifier">
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.classifier (1)">
+    <configuration name="applicant" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuMlApi" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,11 +82,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ml_pipeline" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api_v1/schemas" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ml_pipeline/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="classifier (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuMlApi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ml/pipeline" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ml/pipeline/classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,28 +161,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TyuiuMlApi" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="transformer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuMlApi" />
       <option name="ENV_FILES" value="" />
@@ -213,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.classifier (1)" />
+        <item itemvalue="Python.applicant" />
         <item itemvalue="Python.classifier" />
         <item itemvalue="Python.transformer" />
         <item itemvalue="Python.data_transformer" />
-        <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +281,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732619353143</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[tyuiu-classifier-api] 24.12.2024 new fitted models">
+      <option name="closed" value="true" />
+      <created>1734983618913</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734983618913</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[tyuiu-classifier-api] 24.12.2024 update api_v1">
+      <option name="closed" value="true" />
+      <created>1734983675796</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734983675796</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[tyuiu-classifier-api] 24.12.2024 update route">
+      <option name="closed" value="true" />
+      <created>1734984410852</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734984410852</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -322,6 +318,9 @@
     <MESSAGE value="20.11.2024 1.0.2" />
     <MESSAGE value="[tyuiu-classifier-api] 26.11.2024" />
     <MESSAGE value="[tyuiu-classifier-api] 26.11.2024 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-classifier-api] 26.11.2024 1.0" />
+    <MESSAGE value="[tyuiu-classifier-api] 24.12.2024 new fitted models" />
+    <MESSAGE value="[tyuiu-classifier-api] 24.12.2024 update api_v1" />
+    <MESSAGE value="[tyuiu-classifier-api] 24.12.2024 update route" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-classifier-api] 24.12.2024 update route" />
   </component>
 </project>

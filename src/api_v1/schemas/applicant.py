@@ -19,6 +19,10 @@ class ApplicantPrediction(BaseModel):
     prediction: float
 
 
+class ApplicantsPredictions(BaseModel):
+    predictions: List[float]
+
+
 class ApplicantResponse(BaseModel):
     status: Literal["ok"] = "ok"
     data: ApplicantPrediction
@@ -26,5 +30,5 @@ class ApplicantResponse(BaseModel):
 
 class ApplicantsResponse(BaseModel):
     status: Literal['ok'] = 'ok'
-    data: List[float]
+    data: ApplicantsPredictions
 

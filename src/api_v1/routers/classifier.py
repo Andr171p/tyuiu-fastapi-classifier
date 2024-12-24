@@ -6,7 +6,8 @@ from src.ml.pipeline.classifier import model_pipeline
 from src.api_v1.schemas.applicant import (
     ApplicantSchema,
     ApplicantsSchema,
-    ApplicantResponse
+    ApplicantResponse,
+    ApplicantsResponse
 )
 
 from src.config import settings
@@ -23,20 +24,27 @@ async def predict_applicant(applicants: ApplicantSchema) -> JSONResponse:
     data = applicants.model_dump()
     prediction = model_pipeline.predict_proba(data)
     return JSONResponse(
+        status_code=status.HTTP_200_OK,
         content={
-            'status': 'ok',
-            'data': prediction[0][0]
+            "data": {
+                "status": "ok",
+                "prediction": float(prediction[0][1])
+            }
         }
     )
 
 
-@classifier_router.post(path="/predict/applicants/", response_model=...)
+@classifier_router.post(path="/predict/applicants/", response_model=ApplicantsResponse)
 async def predict_applicants(applicants: ApplicantsSchema) -> JSONResponse:
-    data = applicants.model_dump()['applicants']
-    predictions = model_pipeline.predict_proba(data)
+    data = applicants.model_dump()
+    predictions = model_pipeline.predict_proba(data['applicants'])
     return JSONResponse(
+        status_code=status.HTTP_200_OK,
         content={
-            'status': 'ok',
-            'data': predictions
+            "status": "ok",
+            "predictions": [
+                float(prediction[1])
+                for prediction in predictions
+            ]
         }
     )
